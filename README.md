@@ -1,5 +1,19 @@
-# Machine learning in the reverse computation of 2 layer planar model based on FD-NIRS measurements at 110 MHz.
-&emsp;&emsp; This repository was used to save and display the experimental data of our study: Machine learning for hemoglobin concentration estimation in a 2 layer planar model (A Monte Carlo simulation study). It includes the codes used for Monte Carlo simulation in 2 layer planar model and the revserse computation. There are three folders in this repository: fitting, papers, and simulation. the fitting folder includes codes used for reverse computation using different machine learning and mathematical models, the paper folder includes the related papers with our research, the simulation folder contain the code used for Monte Carlo simulations. <br>
+# Machine Learning for Inverse Computation in a Two-Layer Planar Model Using FD-NIRS Measurements at 110 MHz
+
+This repository contains the simulation data and source code associated with our study, **"Machine Learning for Hemoglobin Concentration Estimation in a Two-Layer Planar Model: A Monte Carlo Simulation Study."**
+
+The study investigates the application of machine learning and mathematical methods to estimate hemoglobin concentrations in a two-layer planar tissue model using frequency-domain near-infrared spectroscopy (FD-NIRS) measurements at a modulation frequency of 110 MHz. The repository includes code for Monte Carlo (MC) simulations and inverse computation using different modeling approaches.
+
+## Repository Structure
+
+The repository is organized into three main directories:
+
+- **`fitting/`** – Contains implementations of machine learning algorithms and mathematical models for inverse computation and hemoglobin concentration estimation.
+- **`papers/`** – Contains research papers and reference materials relevant to this study.
+- **`simulation/`** – Contains code for performing Monte Carlo simulations in a two-layer planar tissue model.
+
+This repository is intended to support the reproducibility of our research and facilitate further investigations into machine learning-based inverse computation for FD-NIRS applications.
+
 <img width="722" height="244" alt="image" src="https://github.com/user-attachments/assets/0fb23aaa-9cd5-44d2-8f4f-02fb8cf5753b" />
 <figcaption align="center"><b>Figure 1:</b> Workflow of forward and inverse computations. Blue boxes represent the forward process, in which random hemoglobin concentrations and scattering proper-ties, together with variable first-layer thickness, are selected as input parameters for MC simulations to generate TD-NIRS data, followed by synthesis of FD-NIRS data via Fou-rier transform at 110 MHz. Orange boxes represent the inverse modeling framework using ML methods.</figcaption><br>
 
