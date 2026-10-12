@@ -44,6 +44,24 @@ Monte Carlo (MC) simulations were performed using **Monte Carlo eXtreme (MCX)**.
 
 ## Inverse Computation Using Machine Learning
 
-The inverse computation was performed using multiple machine learning (ML) algorithms, including four variants of k-nearest neighbors (KNN), XGBoost, Gradient Boosting, and CatBoost. FD-NIRS measurements, including AC amplitude (Uac), DC amplitude (Udc), and phase, were used as model inputs to estimate oxyhemoglobin ([HbO]) and deoxyhemoglobin ([Hb]) concentrations, along with relevant optical properties, in both tissue layers.
+The inverse computation was performed using multiple machine learning (ML) algorithms, including four variants of k-nearest neighbors (KNN), XGBoost, Gradient Boosting (GB), CatBoost(CB), Artificial neural network(ANN), and random forest(RF). FD-NIRS measurements, including AC amplitude (Uac), DC amplitude (Udc), and phase, were used as model inputs to estimate oxyhemoglobin ([HbO]) and deoxyhemoglobin ([Hb]) concentrations, along with relevant optical properties, in both tissue layers.
 
 Model performance was evaluated using mean absolute error (MAE) and mean absolute percentage error (MAPE). The primary objective of this study was to systematically compare the performance of different ML algorithms for solving the inverse problem in a two-layer planar tissue model and assess their potential for hemoglobin concentration estimation from FD-NIRS measurements.
+
+
+## Robustness Evaluation Under Gaussian Noise
+
+To evaluate the robustness of different machine learning models, zero-mean Gaussian noise was added to the simulated FD-NIRS measurements, including AC amplitude (Uac), DC amplitude (Udc), and phase. Four noise levels were considered to represent different degrees of measurement uncertainty.
+
+For Uac and Udc, Gaussian noise was introduced using a standard deviation proportional to the original measurement values. For phase measurements, Gaussian noise was added using a fixed standard deviation in degrees.
+
+The noise levels were defined as follows:
+
+| Noise Level | Uac and Udc Noise (Relative STD) | Phase Noise (STD) |
+|:-----------:|:--------------------------------:|:-----------------:|
+| Level 1 | 0.75% | 0.15° |
+| Level 2 | 1.50% | 0.30° |
+| Level 3 | 3.75% | 0.75° |
+| Level 4 | 7.50% | 1.50° |
+
+The selected noise levels cover a range of measurement uncertainties, from relatively low noise to substantially elevated noise conditions. Model performance was evaluated under all four noise levels to assess the sensitivity and robustness of different machine learning approaches to measurement noise.
