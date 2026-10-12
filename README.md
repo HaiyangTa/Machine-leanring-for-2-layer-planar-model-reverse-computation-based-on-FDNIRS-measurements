@@ -1,4 +1,4 @@
-# Machine Learning for Inverse Computation in a Two-Layer Planar Model Using FD-NIRS Measurements at 110 MHz
+# Machine learning for hemoglobin concentration estimation in a two-layer planar model using frequency-domain NIRS: A Monte Carlo simulation study
 
 This repository contains the simulation data and source code associated with our study, **"Machine Learning for Hemoglobin Concentration Estimation in a Two-Layer Planar Model: A Monte Carlo Simulation Study."**
 
@@ -34,8 +34,16 @@ This repository is intended to support the reproducibility of our research and f
 | b2 | [0.3, 3.3] | - |
 
 
-&emsp;&emsp;The software tool used for the Monte Carlo simulation is MCX. To balance the the time spending on simulation and data density, we conducted a total of 11000 simulations and got 11000 FD-NIRS measurements. Figure 1 shows the overall process of the study and Figure 2 shows the geometry of the 2 layer planar model<br>
-<img width="648" height="361" alt="image" src="https://github.com/user-attachments/assets/f5200478-ab33-490e-b3a3-8dfe9443fe48" />
-<figcaption align="center"><b>Figure 2:</b> The two-layer planar model used in MC simulations.</figcaption><br>
+## Monte Carlo Simulation
 
-&emsp;&emsp; The inverse process were conducted by multiple machine learning approaches. These approaches include four variants of KNN, XGBoost, Gradient Boost, and Catboost. FD-NIRS measurements (Uac, Udc, phase) were fed into models and the hemoglobin concentrations ([HbO], [Hb]) and relevant optic properties were predicted for both layers. The mean absolute error and mean percentage error were measured for different ML models. The main purpose of the study is to comprehensively test the performance of different ML models in the 2-layer planar model reverse computation. <br>
+Monte Carlo (MC) simulations were performed using **Monte Carlo eXtreme (MCX)**. To balance computational cost and dataset coverage, a total of 11,000 simulations were conducted, generating 11,000 sets of frequency-domain near-infrared spectroscopy (FD-NIRS) measurements. Figure 1 illustrates the overall workflow of the study, while Figure 2 presents the geometry of the two-layer planar tissue model used in the simulations.
+
+<img width="648" height="361" alt="Two-layer planar tissue model used in Monte Carlo simulations" src="https://github.com/user-attachments/assets/f5200478-ab33-490e-b3a3-8dfe9443fe48" />
+
+<p align="center"><b>Figure 2.</b> Geometry of the two-layer planar model used in MC simulations.</p>
+
+## Inverse Computation Using Machine Learning
+
+The inverse computation was performed using multiple machine learning (ML) algorithms, including four variants of k-nearest neighbors (KNN), XGBoost, Gradient Boosting, and CatBoost. FD-NIRS measurements, including AC amplitude (Uac), DC amplitude (Udc), and phase, were used as model inputs to estimate oxyhemoglobin ([HbO]) and deoxyhemoglobin ([Hb]) concentrations, along with relevant optical properties, in both tissue layers.
+
+Model performance was evaluated using mean absolute error (MAE) and mean absolute percentage error (MAPE). The primary objective of this study was to systematically compare the performance of different ML algorithms for solving the inverse problem in a two-layer planar tissue model and assess their potential for hemoglobin concentration estimation from FD-NIRS measurements.
