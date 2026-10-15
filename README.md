@@ -40,7 +40,7 @@ Monte Carlo (MC) simulations were performed using **Monte Carlo eXtreme (MCX)**.
 
 <img width="648" height="361" alt="Two-layer planar tissue model used in Monte Carlo simulations" src="https://github.com/user-attachments/assets/f5200478-ab33-490e-b3a3-8dfe9443fe48" />
 
-<p align="center"><b>Figure 2.</b> Geometry of the two-layer planar model used in MC simulations.</p>
+<p align="center"><b>Figure 2.</b> Geometry of the two-layer planar model used in MC simulations. It includes one source and four source-detector separations (S-D separations): D1, D2, D3, and D4. The S-D distances are 1, 2, 3, and 4 cm from the source, respectively. The whole geometry is a 100 nm by 100 nm by 100 nm cube, and the smallest unit is 1 mm3. The light source is a laser with a delta-function photon release pattern. The number of photons are 120 million in each of the release. </p>
 
 ## Inverse Computation Using Machine Learning
 
